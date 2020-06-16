@@ -1,0 +1,22 @@
+You got:  95 out of 100.
+
+1. One Binary Number: out of 25 you got: 25
+- recursive case: out of 10 you got:10
+- stopping case:out of 10 you got:10
+- no leading zeros: out of 5 you got:5
+
+2. Triangle Pattern: out of 25 you got:25
+- Precondition: out of 5 you got: 5
+- recursive case (condition) : out of 10 you got:10
+- stopping case(two lines, and the way you print *): out of 10 you got:10
+
+
+3. Pow Function: out of 25 you got:20
+- Precondition: out of 5 you got:0 
+- recursive case (negative, odd and even numbers): out of 15 you got:15
+- stopping cases (n=0 and n=1): out of 5 you got: 5
+
+4. Repeated and Indented Sentences: out of 25 you got:25
+- Precondition: out of 5 you got:5
+- recursive case: out of 10 you got:10
+- stopping case(two lines, intents, line number): out of 10 you got:10

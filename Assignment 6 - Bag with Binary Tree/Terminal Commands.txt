@@ -1,0 +1,113 @@
+Zhigangs-MacBook-Air:A6 zzhu$ g++ -c -Wall bagexam.cxx
+In file included from bagexam.cxx:21:
+In file included from ./bag6.h:94:
+./bag6.template:177:10: error: use of undeclared identifier 'removed'; did you mean 'remove'?
+                return removed;
+                       ^~~~~~~
+                       remove
+/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/stdio.h:174:6: note: 'remove' declared
+      here
+int      remove(const char *);
+         ^
+In file included from bagexam.cxx:21:
+In file included from ./bag6.h:94:
+./bag6.template:240:24: error: expected expression
+                                        cursor = cursor - > left();
+                                                          ^
+./bag6.template:240:26: error: use of undeclared identifier 'left'
+                                        cursor = cursor - > left();
+                                                            ^
+./bag6.template:244:24: error: expected expression
+                                        cursor = cursor - > right(); // 3rd condition
+                                                          ^
+./bag6.template:244:26: error: use of undeclared identifier 'right'
+                                        cursor = cursor - > right(); // 3rd condition
+                                                            ^
+./bag6.template:248:24: error: expected expression
+                                        cursor = cursor - > left(); //4th condition
+                                                          ^
+./bag6.template:248:26: error: use of undeclared identifier 'left'
+                                        cursor = cursor - > left(); //4th condition
+                                                            ^
+bagexam.cxx:234:10: warning: explicitly assigning value of variable of type 'bag<int>' to itself
+      [-Wself-assign-overloaded]
+    test = test;
+    ~~~~ ^ ~~~~
+In file included from bagexam.cxx:21:
+In file included from ./bag6.h:94:
+./bag6.template:177:10: error: cannot initialize return object of type 'typename bag<int>::size_type'
+      (aka 'unsigned long') with an lvalue of type 'int (const char *)'
+                return removed;
+
+SECOND RUN: After I fixed a number of places:
+
+Zhigangs-MacBook-Air:A6 zzhu$ g++ -c -Wall bagexam.cxx
+bagexam.cxx:234:10: warning: explicitly assigning value of variable of type
+      'bag<int>' to itself [-Wself-assign-overloaded]
+    test = test;
+    ~~~~ ^ ~~~~
+1 warning generated.
+Zhigangs-MacBook-Air:A6 zzhu$ g++ -Wall bagexam.o -o bagexam.exe
+Zhigangs-MacBook-Air:A6 zzhu$ ./bagexam.exe
+
+START OF TEST 1:
+Testing insert and the constant member functions (40 points).
+A. Testing size and count for an empty bag.
+Test passed.
+
+B. Adding the number 4 to the bag, and then testing
+   size and count.
+Test passed.
+
+C. Inserting the number 2 into the bag.
+   Then checking size and count.
+Test passed.
+
+D. Inserting the number 1 into the bag.
+   Then checking size and count.
+Test passed.
+
+E. Inserting the number 3 into the bag.
+   Then checking size and count.
+Test failed.
+
+Test 1 failed.
+END OF TEST 1.
+
+
+START OF TEST 2:
+Testing the copy constructor (10 points).
+A. Testing that copy constructor works okay for empty bag...Test passed.
+
+B. Testing copy constructor with 4-item bag...Test passed.
+
+Copy constructor seems okay.
+Test 2 got 10 points out of a possible 10.
+END OF TEST 2.
+
+
+START OF TEST 3:
+Testing the assignment operator (10 points).
+A. Testing that assignment operator works okay for empty bag...Test passed.
+
+B. Testing assignment operator with 4-item bag...Test passed.
+
+C. Testing assignment operator for a self-assignment...passed.
+Assignment operator seems okay.
+Test 3 got 10 points out of a possible 10.
+END OF TEST 3.
+
+
+START OF TEST 4:
+Testing erase and erase_one functions (20 points).
+Testing removal from empty bag (should have no effect) ...Test passed.
+
+Inserting these: 8 6 10 1 7 10 15 3 13 2 5 11 14 4 12
+Test failed.
+
+Test 4 failed.
+END OF TEST 4.
+
+If you submit this BAG to the TA now, you will have
+20 points out of the 100 points from this test program.
+Zhigangs-MacBook-Air:A6 zzhu$ 

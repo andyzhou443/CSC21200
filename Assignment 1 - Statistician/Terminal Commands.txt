@@ -1,0 +1,8 @@
+g++ -c (file name)
+g++ -c (file name 2)
+
+Assignment 1
+g++ -c stats.cxx
+g++ -c statexam.cxx
+g++ stats.o statexam.o -o statexam
+./statexam
